@@ -1,3 +1,20 @@
+/* ---------- VARIAVEIS ---------- */
+
+:root {
+  --font-title:24px;
+  --font-title-destaque:63px;
+  --font-subtitle-destaque:21px;
+  --font-text: 19px;
+  --font-family: 'Montserrat', sans-serif;
+  --font-family-text:'Lato', sans-serif;
+  --white-color: #FFFFFF;
+  --blue-color: #007AFF;
+  --darkblue-color: #00043E;
+  --gray-color: #303030;
+  --light-gray:#818181;
+
+}
+
 /* ---------- HEADER DESKTOP ---------- */
 
 header {
@@ -55,12 +72,13 @@ nav .links a {
   padding: 1em;
   font-size: 13px;
   text-decoration: none;
-  color: #818181;
+  color: var(--light-gray);
   /* font-size: calc(16px + 0.5vw); */
+  transition: 0.3s ease-in-out;
 }
 
-nav a:hover {
-  border-bottom: 1px solid 818181;
+.links a:hover {
+  color: var(--white-color);
 }
 
 #nav-toggle {
@@ -139,7 +157,7 @@ nav .burger .linha {
   }
 }
 
-/* ------------ AREA DE DESTAQUE MOBILE ------------ */
+/* ------------ AREA DE DESTAQUE ------------ */
 
 .secaoDestaque {
   display:flex;
@@ -147,30 +165,30 @@ nav .burger .linha {
   margin: 0 auto;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #00043e;
+  background-color: var(--darkblue-color);
   height:300px;
   width: 100%;
 }
 
-.title {
+.secaoDestaque__title {
   display:flex;
   text-align: center;
   margin:0 auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-family);
   font-weight: 300;
   hyphens:auto;
-  color: #FFFF;
-  font-size: 63px;
+  color: var(--white-color);
+  font-size: var(--font-title-destaque);
   padding-bottom: 15px;
   max-width: 500px;
 }
 
-.subtitle {
+.secaoDestaque__subtitle {
   display:flex;
-  color:#FFFF;
-  font-family: 'Lato';
+  color: var(--white-color);
+  font-family: var(--font-family-text);
   font-weight: 300;
-  font-size: 21px;
+  font-size: var(--font-subtitle-destaque);
   padding-bottom: 15px;
 }
 
@@ -181,11 +199,17 @@ nav .burger .linha {
 
 button {
   border: none;
-  color:#FFFFFF;
+  color: var(--white-color);
   padding: 10px;
   border-radius: 0 4px 4px 0;
-  background-color:#007aff;
-  font-family: 'Lato';
+  background-color: var(--blue-color);
+  font-family: var(--font-family-text);
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:#00043E;
 }
 
 input[type="email"] {
@@ -194,43 +218,165 @@ input[type="email"] {
 }
 
 input::placeholder {
-  font-family: 'Lato';
+  font-family: var(--font-family-text);
   padding-left: 10px;
 }
 
-/* ------------ AREA DE DESTAQUE DESKTOP ------------ */
+/* ------------ CALENDARIO ------------ */
 
-@media screen and (min-width: 769px) {
-
-  .secaoDestaque {
-    background-image: url("/assets/img/background-destaque.webp");
-    background-position: 70%;
+  .secaoCalendar {
     display:flex;
-    height:600px;
-    padding-top: 150px;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    
   }
 
-  .title {
-    display:inline;
-    margin:0 auto;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    hyphens:auto;
-    color: #FFFF;
-    font-size: 63px;
-    padding-bottom: 15px;
-    max-width: 1000px;
+  .secaoCalendar__title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 19px;
+    margin-top: 30px;
   }
 
-  .secaoDestaqueFormulario, input {
-    width: 500px;
+  .secaoCalendar__par {
+    font-family: var(--font-family-text);
+    font-weight: 400;
+    margin-top: 30px;
   }
 
-  .bgimg {
-    width:auto;
+  #schedule-container {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 30px;
+    max-width: 250px;
+    border: 1px solid var(--darkblue-color);
+    height: 600px;
   }
+
+  .calendario {
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .calendario__data {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100px;
+    background-color: var(--darkblue-color);
+    color:var(--white-color);
+    font-family: var(--font-family-text);
+    font-weight: 700;
+    font-size: 36px;
+  }
+
+  .calendario__data-title {
+    display:flex;
+    justify-content: center;
+    font-family: var(--font-family-text);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 20px 0 20px 0;
+  }
+
+  .calendario__par {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    height: 300px;
+    max-width:150px;
+    line-height: 1.5;
+    font-family: var(--font-family-text);
+    color: var(--light-gray);
+    margin-bottom: 30px;
+  }
+
+  .calendario__data-rodape {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-family: var(--font-family-text);
+    font-weight: 600;
+    border-top: 1px solid var(--light-gray);
+    padding: 20px 0 20px 0;
+    width: 250px;
+    color: var(--light-gray);
+    font-size: 32px;
+  }
+
+  .calendario__data-rodape span {
+    margin: 30px 0 30px 0;
+  }
+
+  .calendario__data-rodape button {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    height:40px;
+    width: 220px;
+    border-radius: 5px;
+    font-family: var(--font-family-text);
+    font-size: 15px;
+  }
+
+ /* ---------- MEDIA QUERIES ---------- */
+
+  @media screen and (min-width: 769px) {
+
+    /* ---------- AREA DE DESTAQUE DESKTOP ---------- */
+
+.secaoDestaque {
+  background-image: url("../img/background-destaque.webp");
+  background-size: cover;
+  background-position: 70%;
+  display:flex;
+  height:600px;
+  padding-top: 150px;
 }
 
+.title {
+  display:inline;
+  margin:0 auto;
+  font-family: var(--font-family);
+  font-weight: 300;
+  hyphens:auto;
+  color: var(--white-color);
+  font-size: var(--font-title-destaque);
+  padding-bottom: 15px;
+}
 
+.secaoDestaqueFormulario, input {
+  width: 500px;
+}
 
+.bgimg {
+  width:auto;
+}
 
+    /* ---------- CALENDARIO DESKTOP ---------- */
+
+  .calendario {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #schedule-container {
+    margin: 0;
+  }
+}
