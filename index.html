@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="icon-96x96.webp" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&display=swap" rel="stylesheet">
+
     <title>Landing Page Kenzie Academy</title>
   </head>
   <body>
@@ -48,7 +53,7 @@
       <section class="secaoSobre">
         <article class="flex">
           <!-- COLUNA ESQUERDA -->
-          <div class="flex-col">
+          <div class="flex-col col-right">
             <h2>LOREM IPSUM DOLOR SIT PYTHON</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
@@ -57,8 +62,8 @@
               repudiandae sunt voluptatibus commodi tenetur dolorum ipsa sequi.
             </p>
 
-            <span
-              >Consectetur adipisicing elit 5 Suscipit deleniti incidunt nam
+            <span>
+              Consectetur adipisicing elit 5 Suscipit deleniti incidunt nam
               quibusdam fugit reprehenderit aperiam.</span
             >
 
@@ -68,21 +73,23 @@
           <!-- COLUNA DIREITA -->
           <div class="flex-col">
             <figure>
-              <img src="assets/img/python.png" alt="python" />
+              <img id="fig-python"src="assets/img/python.png" alt="python" />
               <figcaption>python</figcaption>
             </figure>
           </div>
 
           <!-- COLUNA ESQUERDA -->
+
+          
           <div class="flex-col">
             <figure>
-              <img src="assets/img/JavaScript-logo.png" alt="Java Script" />
+              <img id="img-python"src="assets/img/JavaScript-logo.png" alt="Java Script" />
               <figcaption>Java Script</figcaption>
             </figure>
           </div>
 
           <!-- COLUNA DIREITA -->
-          <div class="flex-col">
+          <div class="flex-col flex-col--modifier" >
             <h2>LOREM IPSUM DOLOR SIT JAVASCRIPT</h2>
             <ul>
               <li>The standard Lorem Ipsum passage, used since the 1500s</li>
@@ -101,6 +108,9 @@
         </article>
       </section>
 
+
+
+      <!-- PRIMEIRO FAZER A SEÇÃO SOBRE DEPOIS A CURSOS (PROXIMA) -->
       <!-- SEÇÃO CURSOS -->
       <section class="secaoCursos">
         <article>
@@ -227,9 +237,9 @@
               <p>Contact us and we'll get back to you within 24 hours.</p>
 
               <ul>
-                <li><a href="#">Chicago, US</a></li>
-                <li><a href="tel:001515151515">+00 1515151515</a></li>
-                <li>
+                <li><i class="fas fa-map-marker-alt"></i><a href="#">Chicago, US</a></li>
+                <li><i class="fas fa-mobile-alt"></i><a href="tel:001515151515">+00 1515151515</a></li>
+                <li><i class="far fa-envelope"></i>
                   <a href="malito:myemail@something.com"
                     >myemail@something.com</a
                   >
@@ -239,17 +249,28 @@
           </div>
 
           <!-- COLUNA LADO DIRETO -->
-          <div class="flex-col">
+          <div class="flex-col flex-col--contact">
             <h2>Contact</h2>
 
+            <p class="description-disabled">Contact us and we'll get back to you within 24 hours.</p>
+            <ul class="description-disabled">
+              <li><i class="fas fa-map-marker-alt"></i><a href="#">Chicago, US</a></li>
+              <li><i class="fas fa-mobile-alt"></i><a href="tel:001515151515">+00 1515151515</a></li>
+              <li><i class="far fa-envelope"></i>
+                <a href="malito:myemail@something.com"
+                  >myemail@something.com</a
+                >
+              </li>
+            </ul>
             <form action="">
               <div class="form-input-model">
-                <label for="nome">Nome</label>
+                <label for="nome">Nome</label><br>
                 <input type="text" placeholder="Name" id="nome" name="nome" />
               </div>
 
               <div class="form-input-model">
                 <label for="email">E-mail</label>
+                <br>
                 <input
                   type="text"
                   placeholder="E-mail"
@@ -258,9 +279,9 @@
                 />
               </div>
 
-              <div class="form-input-model">
-                <label for="mensagem">E-mail</label>
-                <textarea name="mensagem" id="mensagem"></textarea>
+              <div class="form-input-model  form-textarea">
+                <label for="mensagem">E-mail</label><br>
+                <textarea name="mensagem" id="mensagem" placeholder="Comment"></textarea>
               </div>
 
               <input type="submit" value="Send" />
@@ -271,6 +292,7 @@
     </main>
 
     <footer>
+      <i class="fas fa-chevron-up"></i>
       <p>Kenzie Academy - <a href="kenzie.com.br">kenzie.com.br</a></p>
     </footer>
 
