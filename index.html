@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/9d647ff4d6.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Landing Page Kenzie Academy</title>
   </head>
   <body>
@@ -15,40 +23,49 @@
     <header class="topo">
       <div class="large-container">
         <!-- MENU DE NAVEGAÇÃO -->
-        <nav>
-          <!-- LOGO -->
+        <!-- LOGO -->
+
+        <div class="logo">
           <figure>
             <img src="assets/img/logo.svg" alt="Logo Kenzie Academy" />
             <figcaption>Logo Kenzie Academy</figcaption>
           </figure>
+        </div>
+        <nav>
+          <input id="nav-toggle" type="checkbox" />
           <ul class="links">
             <li><a href="#sobre">Sobre a Kenzie</a></li>
-            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#agenda">Preços</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
+          <label for="nav-toggle" class="burger">
+            <div class="linha"></div>
+            <div class="linha"></div>
+            <div class="linha"></div>
+          </label>
         </nav>
       </div>
     </header>
 
     <!-- PÁGINA INICIAL -->
-    <main class="inicial">
-      <!-- ÁREA DE DESTAQUE -->
-      <section class="secaoDestaque">
-        <h2>Lorem ipsum dolor sit Python</h2>
-        <p>100% Online</p>
+    <main class="inicial"> 
+    <!-- ÁREA DE DESTAQUE -->
+    <section class="secaoDestaque">
+        <h2 class="title">Lorem ipsum dolor sit Python</h2>
+        <p class="subtitle">100% Online</p>
 
-        <!-- FORMULÁRIO -->
+    <!-- FORMULÁRIO -->
         <div class="secaoDestaqueFormulario">
           <input type="email" placeholder="E-mail" required />
           <button type="button">Subscribe</button>
         </div>
       </section>
 
-      <!-- SEÇÃO SOBRE -->
-      <section class="secaoSobre">
-        <article class="flex">
-          <!-- COLUNA ESQUERDA -->
-          <div class="flex-col">
+    <!-- SEÇÃO SOBRE -->
+    <!-- <section class="secaoSobre"> -->
+    <!-- <article class="flex"> -->
+    <!-- COLUNA ESQUERDA -->
+    <!-- <div class="flex-col">
             <h2>LOREM IPSUM DOLOR SIT PYTHON</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
@@ -63,26 +80,26 @@
             >
 
             <button>Subscribe</button>
-          </div>
+          </div> -->
 
-          <!-- COLUNA DIREITA -->
-          <div class="flex-col">
+    <!-- COLUNA DIREITA -->
+    <!-- <div class="flex-col">
             <figure>
               <img src="assets/img/python.png" alt="python" />
               <figcaption>python</figcaption>
             </figure>
-          </div>
+          </div> -->
 
-          <!-- COLUNA ESQUERDA -->
-          <div class="flex-col">
+    <!-- COLUNA ESQUERDA -->
+    <!-- <div class="flex-col">
             <figure>
               <img src="assets/img/JavaScript-logo.png" alt="Java Script" />
               <figcaption>Java Script</figcaption>
             </figure>
-          </div>
+          </div> -->
 
-          <!-- COLUNA DIREITA -->
-          <div class="flex-col">
+    <!-- COLUNA DIREITA -->
+    <!-- <div class="flex-col">
             <h2>LOREM IPSUM DOLOR SIT JAVASCRIPT</h2>
             <ul>
               <li>The standard Lorem Ipsum passage, used since the 1500s</li>
@@ -97,18 +114,18 @@
               </li>
               <li>1914 translation by H. Rackham</li>
             </ul>
-          </div>
-        </article>
-      </section>
+          </div> -->
+    <!-- </article> -->
+    <!-- </section> -->
 
-      <!-- SEÇÃO CURSOS -->
-      <section class="secaoCursos">
+    <!-- SEÇÃO CURSOS -->
+    <!-- <section class="secaoCursos">
         <article>
           <h2>COURSES</h2>
-          <p>What we offer</p>
+          <p>What we offer</p> -->
 
-          <!-- LISTA DE CURSOS -->
-          <ul>
+    <!-- LISTA DE CURSOS -->
+    <!-- <ul>
             <li>
               <img src="assets/img/html-css.png" alt="" />
               <h3>Html/Css</h3>
@@ -164,14 +181,14 @@
             </li>
           </ul>
         </article>
-      </section>
+      </section> -->
 
-      <section class="secaoCalendar">
+    <!-- <section class="secaoCalendar">
         <h2>SCHEDULE</h2>
         <p>Lorem ipsum dolor sit schedule</p>
 
         <!-- LISTA CALENDÁRIO -->
-        <ul class="calendario">
+    <!-- <ul class="calendario">
           <li>
             <span class="calendario-data">22/02</span>
             <h3>HTML/CSS</h3>
@@ -217,12 +234,12 @@
             </div>
           </li>
         </ul>
-      </section>
+      </section> -->
 
-      <section class="secaoContato">
+    <!-- <section class="secaoContato">
         <div class="flex">
           <!-- COLUNA LADO ESQUERDO -->
-          <div class="flex-col">
+    <!-- <div class="flex-col">
             <div class="secaoContato-informacoes">
               <p>Contact us and we'll get back to you within 24 hours.</p>
 
@@ -236,10 +253,10 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
 
-          <!-- COLUNA LADO DIRETO -->
-          <div class="flex-col">
+    <!-- COLUNA LADO DIRETO -->
+    <!-- <div class="flex-col">
             <h2>Contact</h2>
 
             <form action="">
@@ -261,18 +278,18 @@
               <div class="form-input-model">
                 <label for="mensagem">E-mail</label>
                 <textarea name="mensagem" id="mensagem"></textarea>
-              </div>
+              </div> -->
 
-              <input type="submit" value="Send" />
+    <!-- <input type="submit" value="Send" />
             </form>
           </div>
         </div>
       </section>
-    </main>
+    </main> -->
 
-    <footer>
+    <!-- <footer>
       <p>Kenzie Academy - <a href="kenzie.com.br">kenzie.com.br</a></p>
-    </footer>
+    </footer> -->
 
     <script src="assets/js/script.js"></script>
   </body>
