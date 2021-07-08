@@ -212,9 +212,9 @@ main .secaoContato .flex .flex-col .secaoContato-informacoes{
  display: none;
 }
 main .secaoContato .flex .flex-col--contact{
-  /* border: 1px solid tomato; */
   width: 85%;
   display: flex;
+  margin-top: 70px;
   align-items: center;
   flex-direction: column;
 
@@ -865,6 +865,7 @@ input::placeholder {
 
   .secaoCalendar {
     display:flex;
+    margin-top: 70px;
     flex-direction: column;
     margin: 0 auto;
     align-items: center;
