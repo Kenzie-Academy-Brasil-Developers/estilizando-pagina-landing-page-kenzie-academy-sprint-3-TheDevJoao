@@ -117,7 +117,7 @@ main .secaoSobre .container-flex .row-down .down__figure figure figcaption{
     display: none;
 }
 
-main .secaoSobre .container-flex .row-down .flex-col--modifier {}
+
 main .secaoSobre .container-flex .row-down .flex-col--modifier h2 {
     margin-top:1.5rem;
     margin-bottom: 3rem;
@@ -633,7 +633,7 @@ footer {
     display: flex;
     flex-direction:column;
     align-items: center;
-    
+    margin: 0 auto;
   
 }
 
@@ -803,9 +803,8 @@ nav .burger .linha {
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
-  flex-wrap: wrap;
   background-color: var(--darkblue-color);
-  height:300px;
+  height:400px;
   width: 100%;
 }
 
@@ -912,7 +911,7 @@ input::placeholder {
     background-color: var(--darkblue-color);
     color:var(--white-color);
     font-family: var(--font-family-text);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 36px;
   }
 
@@ -945,7 +944,7 @@ input::placeholder {
     align-items: center;
     width:100%;
     font-family: var(--font-family-text);
-    font-weight: 600;
+    font-weight: 400;
     border-top: 1px solid var(--light-gray);
     padding: 20px 0 20px 0;
     width: 250px;
