@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&display=swap" rel="stylesheet">
 
+
     <title>Landing Page Kenzie Academy</title>
   </head>
   <body>
@@ -20,17 +21,26 @@
     <header class="topo">
       <div class="large-container">
         <!-- MENU DE NAVEGAÇÃO -->
-        <nav>
-          <!-- LOGO -->
+        <!-- LOGO -->
+
+        <div class="logo">
           <figure>
             <img src="assets/img/logo.svg" alt="Logo Kenzie Academy" />
             <figcaption>Logo Kenzie Academy</figcaption>
           </figure>
+        </div>
+        <nav>
+          <input id="nav-toggle" type="checkbox" />
           <ul class="links">
             <li><a href="#sobre">Sobre a Kenzie</a></li>
-            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#agenda">Preços</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
+          <label for="nav-toggle" class="burger">
+            <div class="linha"></div>
+            <div class="linha"></div>
+            <div class="linha"></div>
+          </label>
         </nav>
       </div>
     </header>
@@ -39,8 +49,8 @@
     <main class="inicial">
       <!-- ÁREA DE DESTAQUE -->
       <section class="secaoDestaque">
-        <h2>Lorem ipsum dolor sit Python</h2>
-        <p>100% Online</p>
+        <h2 class="secaoDestaque__title">Lorem ipsum dolor sit Python</h2>
+        <p class="secaoDestaque__subtitle">100% Online</p>
 
         <!-- FORMULÁRIO -->
         <div class="secaoDestaqueFormulario">
@@ -183,55 +193,56 @@
           </ul>
         </article>
       </section>
+      
 
       <section class="secaoCalendar">
-        <h2>SCHEDULE</h2>
-        <p>Lorem ipsum dolor sit schedule</p>
+        <h2 class="secaoCalendar__title">SCHEDULE</h2>
+        <p class="secaoCalendar__par">Lorem ipsum dolor sit schedule</p>
 
         <!-- LISTA CALENDÁRIO -->
         <ul class="calendario">
-          <li>
-            <span class="calendario-data">22/02</span>
-            <h3>HTML/CSS</h3>
-            <p>
+          <li id="schedule-container">
+            <span class="calendario__data">22/02</span>
+            <h3 class="calendario__data-title">HTML/CSS</h3>
+            <p class="calendario__par">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
               consectetur quae commodi sed eos repellendus adipisci architecto
               provident, et animi sapiente, rerum fugit quod voluptatum officia
               ipsum maxime nobis explicabo!
             </p>
-            <div class="calendario-data-rodape">
-              <span>7mp</span>
+            <div class="calendario__data-rodape">
+              <span>7pm</span>
               <button>Sign Up</button>
             </div>
           </li>
 
-          <li>
-            <span class="calendario-data">23/02</span>
-            <h3>JavaScript</h3>
-            <p>
+          <li id="schedule-container">
+            <span class="calendario__data">23/02</span>
+            <h3 class="calendario__data-title">JavaScript</h3>
+            <p class="calendario__par">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
               consectetur quae commodi sed eos repellendus adipisci architecto
               provident, et animi sapiente, rerum fugit quod voluptatum officia
               ipsum maxime nobis explicabo!
             </p>
-            <div class="calendario-data-rodape">
-              <span>7mp</span>
+            <div class="calendario__data-rodape">
+              <span>7pm</span>
               <button>Sign Up</button>
             </div>
           </li>
 
-          <li>
-            <span class="calendario-data">24/02</span>
-            <h3>Python</h3>
-            <p>
+          <li id="schedule-container">
+            <span class="calendario__data">24/02</span>
+            <h3 class="calendario__data-title">Python</h3>
+            <p class="calendario__par">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
               consectetur quae commodi sed eos repellendus adipisci architecto
               provident, et animi sapiente, rerum fugit quod voluptatum officia
               ipsum maxime nobis explicabo!
             </p>
-            <div class="calendario-data-rodape">
-              <span>7mp</span>
-              <button>Sign Up</button>
+            <div class="calendario__data-rodape">
+              <span>7pm</span>
+              <button class="">Sign Up</button>
             </div>
           </li>
         </ul>
@@ -255,6 +266,7 @@
               </ul>
             </div>
           </div>
+    
 
           <!-- COLUNA LADO DIRETO -->
           <div class="flex-col flex-col--contact">
@@ -270,6 +282,10 @@
                 >
               </li>
             </ul>
+
+
+
+           
             <form action="">
               <div class="form-input-model">
                 <label for="nome">Nome</label><br>
@@ -296,13 +312,14 @@
               <div class="box-submit">
                 <input type="submit" value="Send" />
               </div>
-             
-              
             </form>
+        
+
           </div>
         </div>
       </section>
     </main>
+    
 
     <footer>
       <i class="fas fa-chevron-up"></i>
